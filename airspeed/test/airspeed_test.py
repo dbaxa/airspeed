@@ -1,16 +1,10 @@
 # -*- coding: latin-1 -*-
 
 import re
+import unittest
 from unittest import TestCase
 
-# Make these tests runnable without needing 'nose' installed
-try:
-    import airspeed
-except ImportError:
-    import sys
-    import os
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-    import airspeed
+import airspeed
 from airspeed.api import Airspeed
 
 import six
@@ -1056,9 +1050,4 @@ line")''')
 # macro call.  Confirm against Velocity.
 
 if __name__ == '__main__':
-    reload(airspeed)
-    import unittest
-    try:
-        unittest.main()
-    except SystemExit:
-        pass
+    unittest.main()
